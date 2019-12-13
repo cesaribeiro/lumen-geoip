@@ -1,0 +1,27 @@
+{
+    "name": "codenexus/lumen-geoip",
+    "description": "GeoIP for Lumen",
+    "keywords": ["php", "codenexus", "lumen", "geoip"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "CodeNexus, LLC",
+            "email": "help@codenexus.org"
+        },
+        {
+            "name": "Jeremy Schaffer",
+            "email": "jeremys@codenexus.org",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "geoip2/geoip2": "^2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codenexus\\GeoIP\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
