@@ -11,8 +11,9 @@ class GeoIPUpdater
      */
     public function update()
     {
-        $url = 'http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz';
         $databasePath = storage_path('app/geoip.mmdb');
+        $licenseKey = env('MAXMIND_GEOLITE_LICENSE_KEY');
+        $url = "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&license_key={$licenseKey}&suffix=tar.gz";
 
         // Download latest MaxMind GeoLite2 City database to temp location
         $tmpFile = tempnam(sys_get_temp_dir(), 'maxmind');
